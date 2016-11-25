@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/instruction"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/vSalario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="@string/salario"
+            style="@android:style/Widget.TextView" />
+        <Switch
+            android:id="@+id/sb_vBenef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vSalario"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/addBenefits"
+            />
+
+        <EditText
+            android:id="@+id/vBenef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vSalario"
+            android:layout_marginTop="35dp"
+            android:hint="@string/beneficios"
+            style="@android:style/TextAppearance.DeviceDefault.Small"/>
+        <Switch
+            android:id="@+id/sb_vAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vBenef"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/addVAdd"/>
+
+        <EditText
+            android:id="@+id/vAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vBenef"
+            android:layout_marginTop="35dp"
+            android:hint="@string/valorAdicional"
+            android:enabled="false"
+            style="@android:style/TextAppearance.DeviceDefault.Small"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

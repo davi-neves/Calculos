@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Calculos</string>
+    <string name="instruction">Por favor preencha os campos abaixo</string>
+    <string name="addBenefits">Considerar Benefícios</string>
+    <string name="noAddBenefits">Desconsiderar Benefícios</string>
+    <string name="addVAdd">Contribuir com valor Adicional</string>
+    <string name="noAddVAdd"> Retirar valor Adicional</string>
+    <string name="salario"> Salário</string>
+    <string name="beneficios"> Benefícios</string>
+    <string name="valorAdicional">Valor Adicional</string>
+    <string name="title_activity_transport">TransportActivity</string>
+    <string name="pass_cost">Preço da Passagem</string>
+    <string name="action_settings">Settings</string>
+    <string name="start">Data Inicial</string>
+    <string name="end">Data Final</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
