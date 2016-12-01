@@ -80,12 +80,12 @@ public class TransportActivity extends AppCompatActivity {
 
         final Calendar calendar = Calendar.getInstance();
         int yy = calendar.get(Calendar.YEAR);
-        int mm = calendar.get(Calendar.MONTH) + 1;
+        int mm = calendar.get(Calendar.MONTH);
         int dd = calendar.get(Calendar.DAY_OF_MONTH);
         DatePickerDialog datePicker = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear)
+                String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1 )
                         + "-" + String.valueOf(year);
                 TextView sDate = (TextView) findViewById(R.id.sDate);
                 sDate.setText(date);
@@ -104,7 +104,7 @@ public class TransportActivity extends AppCompatActivity {
         DatePickerDialog datePicker = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear)
+                String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1)
                         + "-" + String.valueOf(year);
                 TextView fDate = (TextView) findViewById(R.id.fDate);
                 fDate.setText(date);
