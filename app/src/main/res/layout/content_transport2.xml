@@ -11,57 +11,113 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
+
+    <Switch
+        android:id="@+id/chooseCalcOption"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/choose_Calc_Option"/>
+    <TextView
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/budget"/>
+    <EditText
+        android:id="@+id/budget"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
+        android:layout_marginTop="@dimen/text_margin"
         android:text="@string/pass_cost"/>
     <EditText
         android:id="@+id/pass_cost"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/text_margin"
-        android:hint="@string/zerovalue" />
+        android:hint="@string/zeroDecvalue"
+        android:inputType="numberDecimal"/>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/period"/>
-
-    <LinearLayout
+        android:text="@string/start"/>
+    <EditText
+        android:id="@+id/startDate"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_margin"
-            android:text="@string/from"/>
-        <EditText
-            android:id="@+id/sDate"
-            android:layout_weight="5.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_margin"
-            android:hint="@string/start"
-            android:onClick="onClick"/>
-        <TextView
-            android:layout_weight="1.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_margin"
-            android:text="@string/to"/>
-        <EditText
-            android:id="@+id/fDate"
-            android:layout_weight="5.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:hint="@string/end"
-            android:onClick="onfDateClick"/>
-    </LinearLayout>
+        android:inputType="date"
+        android:onClick="onClick"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/end"/>
+    <EditText
+        android:id="@+id/finalDate"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:onClick="onfDateClick"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/number_Of_Days_Quetion"/>
+    <EditText
+        android:id="@+id/goingCarDays"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/zeroIntcvalue"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/fuelPrice"/>
+    <EditText
+        android:id="@+id/fuelPriceValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@android:style/TextAppearance.DeviceDefault.Small"/>
+
+    <TextView
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/carSpendig"/>
+    <EditText
+        android:id="@+id/car_spending"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/distance"/>
+    <EditText
+        android:id="@+id/dailyDistance"
+        style="@android:style/TextAppearance.DeviceDefault.Small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="numberDecimal"/>
 
 
 </LinearLayout>
