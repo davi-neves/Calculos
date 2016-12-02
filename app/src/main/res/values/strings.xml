@@ -16,7 +16,12 @@
     <string name="from">De</string>
     <string name="to">Até</string>
     <string name="period">Período</string>
-    <string name="zerovalue">00,00</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="zeroDecvalue">00,00</string>
+    <string name="zeroIntcvalue">00</string>
+    <string name="number_Of_Days_Quetion">Número de dias que irei de carro ao trabalho</string>
+    <string name="fuelPrice">Preço médio do combustível</string>
+    <string name="carSpendig">Consumo médio do carro (km/l)</string>
+    <string name="distance">Distância percorrida diáriamente</string>
+    <string name="choose_Calc_Option"> Deixar que o app calcule quantos dias posso ir de carro</string>
+    <string name="budget">Quanto posso gastar?</string>
 </resources>

@@ -28,7 +28,7 @@ public class TransportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport);
-        final TextView sDate = (TextView) findViewById(R.id.sDate);
+        final TextView sDate = (TextView) findViewById(R.id.startDate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -87,7 +87,7 @@ public class TransportActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1 )
                         + "-" + String.valueOf(year);
-                TextView sDate = (TextView) findViewById(R.id.sDate);
+                TextView sDate = (TextView) findViewById(R.id.startDate);
                 sDate.setText(date);
 //
             }
@@ -106,7 +106,7 @@ public class TransportActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1)
                         + "-" + String.valueOf(year);
-                TextView fDate = (TextView) findViewById(R.id.fDate);
+                TextView fDate = (TextView) findViewById(R.id.finalDate);
                 fDate.setText(date);
 //
             }
