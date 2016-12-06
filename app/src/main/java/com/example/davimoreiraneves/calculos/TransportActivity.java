@@ -10,7 +10,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -24,12 +27,33 @@ import java.util.TimeZone;
 
 public class TransportActivity extends AppCompatActivity {
 
+    Switch sb_opt;
+    TextView budgetLabel;
+    EditText budget;
+    EditText precoPassagem;
+    TextView startDate;
+    TextView finalDate;
+    EditText goingCarDays;
+    EditText fuelPrice;
+    EditText carSpending;
+    EditText dailyDistance;
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport);
-        final TextView sDate = (TextView) findViewById(R.id.startDate);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        sb_opt = (Switch) findViewById(R.id.chooseCalcOption);
+        budgetLabel = (TextView) findViewById(R.id.budgetLabel);
+        budget = (EditText) findViewById(R.id.budget);
+        precoPassagem = (EditText) findViewById(R.id.pass_cost);
+        startDate = (TextView) findViewById(R.id.startDate);
+        finalDate = (TextView) findViewById(R.id.finalDate);
+        goingCarDays = (EditText) findViewById(R.id.goingCarDays);
+        fuelPrice = (EditText) findViewById(R.id.fuelPriceValue);
+        carSpending = (EditText) findViewById(R.id.car_spending);
+        dailyDistance = (EditText) findViewById(R.id.dailyDistance);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Calendar cal = Calendar.getInstance();
@@ -39,6 +63,38 @@ public class TransportActivity extends AppCompatActivity {
 
         String localTime = date.format(currentLocalTime);
         getSupportActionBar().setTitle(localTime);
+
+        switchMonitor(sb_opt);
+
+
+    }
+
+    private void switchMonitor(Switch sb_opt) {
+        sb_opt.setChecked(false);
+        sb_opt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked){
+                    budgetLabel.setVisibility(View.VISIBLE);
+                    budget.setVisibility(View.VISIBLE);
+                }
+                else {
+                    budgetLabel.setVisibility(View.INVISIBLE);
+                    budget.setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+        if(sb_opt.isChecked()){
+            budgetLabel.setVisibility(View.VISIBLE);
+            budget.setVisibility(View.VISIBLE);
+        }
+        else {
+            budgetLabel.setVisibility(View.INVISIBLE);
+            budget.setVisibility(View.INVISIBLE);
+
+        }
     }
 
     @Override
@@ -87,8 +143,7 @@ public class TransportActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1 )
                         + "-" + String.valueOf(year);
-                TextView sDate = (TextView) findViewById(R.id.startDate);
-                sDate.setText(date);
+                startDate.setText(date);
 //
             }
         }, yy, mm, dd);
@@ -106,8 +161,7 @@ public class TransportActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 String date = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1)
                         + "-" + String.valueOf(year);
-                TextView fDate = (TextView) findViewById(R.id.finalDate);
-                fDate.setText(date);
+                finalDate.setText(date);
 //
             }
         }, yy, mm, dd);
