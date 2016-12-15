@@ -24,4 +24,5 @@
     <string name="distance">Distância percorrida diáriamente</string>
     <string name="choose_Calc_Option"> Deixar que o app calcule quantos dias posso ir de carro</string>
     <string name="budget">Quanto posso gastar?</string>
+    <string name="calculate">Calcular</string>
 </resources>
