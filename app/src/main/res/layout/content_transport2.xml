@@ -118,8 +118,8 @@
         style="@android:style/TextAppearance.DeviceDefault.Small"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:inputType="numberDecimal"/>
-
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="@dimen/inferiorDistance"/>
 
 </LinearLayout>
 

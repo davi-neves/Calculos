@@ -71,7 +71,7 @@
         android:layout_marginTop="250dp"
         android:backgroundTint="@color/primary"
         android:text="@string/calculate"
-        android:textColor="@color/icons"
+        android:textColor="@color/whitheText"
         android:layout_weight="1" />
 
 
