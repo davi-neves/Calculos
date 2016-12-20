@@ -1,4 +1,4 @@
-package com.example.davimoreiraneves.calculos;
+package com.example.davimoreiraneves.calculos.ui;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -16,13 +15,12 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.davimoreiraneves.calculos.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.TimeZone;
 
 
 public class TransportActivity extends AppCompatActivity {

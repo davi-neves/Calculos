@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +18,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CalcDizActivity"
+            android:name=".ui.CalcDizActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".TransportActivity"
+            android:name=".ui.TransportActivity"
             android:label="@string/title_activity_transport"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".ui.Settings"></activity>
     </application>
 
 </manifest>

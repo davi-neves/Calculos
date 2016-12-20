@@ -1,4 +1,4 @@
-package com.example.davimoreiraneves.calculos;
+package com.example.davimoreiraneves.calculos.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,11 +7,16 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.example.davimoreiraneves.calculos.R;
+import com.example.davimoreiraneves.calculos.controler.CalcDizController;
+
 /**
  * Created by davimoreiraneves on 18/11/16.
  */
 public class CalcDizActivity extends Activity{
 
+
+    CalcDizController controller;
     private TextView vSalario;
     private TextView vBenef;
     private TextView vAdd;
@@ -20,6 +25,7 @@ public class CalcDizActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcdiz);
+        controller = new CalcDizController();
         vSalario = (TextView) findViewById(R.id.vSalario);
         vBenef = (TextView) findViewById(R.id.vBenef);
         //chkAdd = (CheckBox) findViewById(R.id.chkAdd);
