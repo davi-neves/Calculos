@@ -25,4 +25,5 @@
     <string name="choose_Calc_Option"> Deixar que o app calcule quantos dias posso ir de carro</string>
     <string name="budget">Quanto posso gastar?</string>
     <string name="calculate">Calcular</string>
+    <string name="CalcDiz">Calculadora de Dízimo</string>
 </resources>

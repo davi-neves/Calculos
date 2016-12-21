@@ -1,9 +1,14 @@
-package com.example.davimoreiraneves.calculos.ui;
+package com.example.davimoreiraneves.calculos.ui.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -13,24 +18,28 @@ import com.example.davimoreiraneves.calculos.controler.CalcDizController;
 /**
  * Created by davimoreiraneves on 18/11/16.
  */
-public class CalcDizActivity extends Activity{
+public class CalcDizActivity extends AppCompatActivity{
 
 
     CalcDizController controller;
-    private TextView vSalario;
-    private TextView vBenef;
-    private TextView vAdd;
+    private EditText vSalario;
+    private EditText vBenef;
+    private EditText vAdd;
     private CheckBox chkAdd;
+    private  TextView tvResult;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcdiz);
         controller = new CalcDizController();
-        vSalario = (TextView) findViewById(R.id.vSalario);
-        vBenef = (TextView) findViewById(R.id.vBenef);
+        vSalario = (EditText) findViewById(R.id.vSalario);
+        vBenef = (EditText) findViewById(R.id.vBenef);
         //chkAdd = (CheckBox) findViewById(R.id.chkAdd);
-        vAdd= (TextView) findViewById(R.id.vAdd);
-
+        vAdd= (EditText) findViewById(R.id.vAdd);
+        tvResult = (TextView) findViewById(R.id.tvResult);
+        toolbar = (Toolbar) findViewById(R.id.toolbarCalcDiz);
+        setSupportActionBar(toolbar);
         //creating Switch and checking if vBenef  must be Enabled
         final Switch sb_vBenef = (Switch) findViewById(R.id.sb_vBenef);
         sb_vBenef.setChecked(false);
@@ -83,6 +92,13 @@ public class CalcDizActivity extends Activity{
         super.onStart();
     }
 
+    public void getCalcDizResult(View view) {
+
+
+        Context context = getBaseContext();
+        Double calcDizResul = controller.getCalcDizResult(vSalario,vBenef,vAdd);
+        getSupportActionBar().setTitle("Valor a Devolver R$"+ String.valueOf(calcDizResul)+"0");
+    }
 }
 
 

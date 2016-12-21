@@ -1,4 +1,4 @@
-package com.example.davimoreiraneves.calculos.ui;
+package com.example.davimoreiraneves.calculos.ui.activity;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
