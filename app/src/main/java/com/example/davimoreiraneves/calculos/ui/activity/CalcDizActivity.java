@@ -1,6 +1,7 @@
 package com.example.davimoreiraneves.calculos.ui.activity;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,9 +19,9 @@ import com.example.davimoreiraneves.calculos.controler.CalcDizController;
 /**
  * Created by davimoreiraneves on 18/11/16.
  */
-public class CalcDizActivity extends AppCompatActivity{
+public class CalcDizActivity extends BaseActivity{
 
-
+    Context context = this;
     CalcDizController controller;
     private EditText vSalario;
     private EditText vBenef;
@@ -48,23 +49,23 @@ public class CalcDizActivity extends AppCompatActivity{
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     vBenef.setEnabled(true);
-                    sb_vBenef.setText(R.string.noAddBenefits);
+//                    sb_vBenef.setText(R.string.noAddBenefits);
                 } else {
                    // vAdd.getEditableText().clear();
                     vBenef.setEnabled(false);
-                    sb_vBenef.setText(R.string.addBenefits);
+//                    sb_vBenef.setText(R.string.addBenefits);
                 }
             }
         });
-       if (sb_vBenef.isChecked()){
-            vAdd.setEnabled(true);
-           sb_vBenef.setText(R.string.noAddBenefits);
-        }
-        else
-        {
-            vAdd.setEnabled(false);
-            sb_vBenef.setText(R.string.addBenefits);
-        }
+//       if (sb_vBenef.isChecked()){
+//            vAdd.setEnabled(true);
+////           sb_vBenef.setText(R.string.noAddBenefits);
+//        }
+//        else
+//        {
+//            vAdd.setEnabled(false);
+////            sb_vBenef.setText(R.string.addBenefits);
+//        }
         //creating Switch and checking if vAddVadd must be enabled
 
         final Switch sb_vAdd = (Switch) findViewById(R.id.sb_vAdd);
@@ -75,10 +76,10 @@ public class CalcDizActivity extends AppCompatActivity{
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     vAdd.setEnabled(true);
-                    sb_vAdd.setText(R.string.noAddVAdd);
+//                    sb_vAdd.setText(R.string.noAddVAdd);
                 }else{
                     vAdd.setEnabled(false);
-                    sb_vAdd.setText(R.string.addVAdd);
+//                    sb_vAdd.setText(R.string.addVAdd);
                 }
             }
         });
@@ -94,11 +95,12 @@ public class CalcDizActivity extends AppCompatActivity{
 
     public void getCalcDizResult(View view) {
 
-
-        Context context = getBaseContext();
+        showLoading(this);
         Double calcDizResul = controller.getCalcDizResult(vSalario,vBenef,vAdd);
-        getSupportActionBar().setTitle("Valor a Devolver R$"+ String.valueOf(calcDizResul)+"0");
+        hidenLoading();
+        getSupportActionBar().setTitle(getText(R.string.vDiz)+ String.valueOf(calcDizResul)+"0");
     }
+
 }
 
 

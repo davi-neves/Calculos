@@ -1,10 +1,13 @@
 <resources>
-    <string name="app_name">Calculos</string>
+    <string name="app_name">Cálculos</string>
+    <string name="diz">Dízimo</string>
+    <string name="transp">Transporte</string>
+    <string name="newJob">Avaliar proposta de emprego</string>
     <string name="instruction">Por favor preencha os campos abaixo</string>
-    <string name="addBenefits">Considerar Benefícios</string>
-    <string name="noAddBenefits">Desconsiderar Benefícios</string>
-    <string name="addVAdd">Contribuir com valor Adicional</string>
-    <string name="noAddVAdd"> Retirar valor Adicional</string>
+    <string name="addBenefits">Considerar benefícios</string>
+    <string name="noAddBenefits">Desconsiderar benefícios</string>
+    <string name="addVAdd">Contribuir com valor adicional</string>
+    <string name="noAddVAdd"> Retirar valor adicional</string>
     <string name="salario"> Salário</string>
     <string name="beneficios"> Benefícios</string>
     <string name="valorAdicional">Valor Adicional</string>
@@ -26,4 +29,5 @@
     <string name="budget">Quanto posso gastar?</string>
     <string name="calculate">Calcular</string>
     <string name="CalcDiz">Calculadora de Dízimo</string>
+    <string name="vDiz">Valor a devolver R$</string>
 </resources>

@@ -5,13 +5,15 @@ import android.widget.TextView;
 
 import com.example.davimoreiraneves.calculos.calculator.CalcDizCalculator;
 
+import java.util.Timer;
+
 /**
  * Created by davimoreiraneves on 20/12/16.
  */
 
 public class CalcDizController {
     public Double getCalcDizResult(TextView vSalario, TextView vBenef, TextView vAdd) {
-        CalcDizCalculator calculator = new CalcDizCalculator();;
+        CalcDizCalculator calculator = new CalcDizCalculator();
         Double salario, benef, add, result;
 
         if (!vSalario.getText().toString().equalsIgnoreCase("")){
@@ -32,7 +34,6 @@ public class CalcDizController {
         else{
             add = 00.00;
         }
-
         result = calculator.run(salario,benef,add);
         return result;
     }

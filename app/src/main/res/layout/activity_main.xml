@@ -29,7 +29,8 @@
             android:id="@+id/btn_diz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Diz"
+            android:text="@string/diz"
+            android:textAllCaps="false"
             android:onClick="calcDiz"
             android:layout_marginTop="138dp"
             android:layout_alignParentTop="true"
@@ -38,7 +39,8 @@
             android:id="@+id/btnTransp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Transporte"
+            android:text="@string/transp"
+            android:textAllCaps="false"
             android:onClick="calcTransp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/btn_diz" />
@@ -48,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btnTransp"
-            android:text="Mundança de Emprego"
+            android:text="@string/newJob"
+            android:textAllCaps="false"
             android:onClick="calcNewJob"/>
 
         <!--<Button-->
